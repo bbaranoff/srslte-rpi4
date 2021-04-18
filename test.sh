@@ -32,6 +32,13 @@ git clone https://github.com/srsLTE/srsLTE
 mkdir build ; cd build; cmake .. ; make -j4 ; make install ; ldconfig
 cd /opt/GSM/srsLTE/build
 ./srslte_install_configs.sh user
+wget https://github.com/bbaranoff/srslte-rpi4/blob/main/epc.conf
+wget https://github.com/bbaranoff/srslte-rpi4/blob/main/enb.conf
+cp enb.conf /root/.config/srslte/enb.conf
+cp epc.conf /root/.config/srslte/epc.conf
+nano /root/.config/user_db.csv
+ue1,mil,!!!!!!!!!!!!CHANGER PAR VALEUR IMSI FOURNIE PAR SYSMOCOM!!!!!!!!!!!!!,!!!!!!!!!!!!!!!!!!!CHANGER PAR Ki FOURNIE PAR SYSMOCOM!!!!!!!!!!!!!!!!,opc,!!!!!!!!!!!!!!!CHANGER PAR VALEUR OPC FOURNIE PAR SYSMOCOM!!!!!!!!!!!!!!!!!,9001,000000001234,7,dynamic
 
+srsepc_if_masq.sh eth0
 
 
