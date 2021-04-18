@@ -1,3 +1,4 @@
+```bash
 !!!!!!!!!!!!!!!!! Procédure technique d'installation !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -80,3 +81,4 @@ s1ap_enable = true
 s1ap_filename = /tmp/enb_s1ap.pcap
 
 
+```
